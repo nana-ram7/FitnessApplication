@@ -1,0 +1,62 @@
+﻿@model List<FitnessApplication.Models.Workout>
+@{
+    ViewData["Title"] = "Workouts";
+    List<int> favoriteWorkouts = ViewBag.FavoriteWorkouts as List<int> ?? new List<int>();
+}
+
+<h2>Available Workouts</h2>
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th>Workout Name</th>
+            <th>Category</th>
+            <th>Duration (minutes)</th>
+            <th>Watch Video</th>
+            <th>Favorite</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var workout in Model)
+        {
+            <tr>
+                <td>@workout.WorkoutName</td>
+                <td>@workout.Category</td>
+                <td>@workout.Duration</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(workout.VideoUrl))
+                    {
+                        <a href="@workout.VideoUrl" target="_blank" class="btn btn-info">Watch</a>
+                    }
+                    else
+                    {
+                        <span>No Video Available</span>
+                    }
+                </td>
+                <td>
+                    @if (favoriteWorkouts.Contains(workout.WorkoutId))
+                    {
+                        <form asp-action="RemoveFromFavorites" method="post" style="display:inline;">
+                            <input type="hidden" name="workoutId" value="@workout.WorkoutId" />
+                            <button type="submit" class="btn btn-danger">Unfavorite</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="AddToFavorites" method="post" style="display:inline;">
+                            <input type="hidden" name="workoutId" value="@workout.WorkoutId" />
+                            <button type="submit" class="btn btn-success">Favorite</button>
+                        </form>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@workout.WorkoutId" class="btn btn-warning">Edit</a>
+                </td>
+                <td>
+                    <a asp-action="Delete" asp-route-id="@workout.WorkoutId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

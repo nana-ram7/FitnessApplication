@@ -1,0 +1,92 @@
+﻿@model FitnessApplication.Models.User
+
+@{
+    ViewData["Title"] = "Profile Setup";
+    bool isProfileComplete = ViewBag.ProfileComplete ?? false;
+}
+<div class="text-center mb-4">
+    @if (!string.IsNullOrEmpty(Model?.ProfilePicture))
+    {
+        <img src="/images/uploads/@Model.ProfilePicture" class="rounded-circle" style="width:100px;height:100px;" alt="Profile Picture" />
+    }
+    else
+    {
+        <div class="rounded-circle bg-secondary d-flex justify-content-center align-items-center" style="width:100px;height:100px;">
+            <i class="bi bi-person" style="font-size:48px; color:white;"></i>
+        </div>
+    }
+
+</div>
+
+<h2>Welcome, @User.FindFirst("Name")?.Value</h2>
+@if (isProfileComplete)
+{
+    <div class="alert alert-info">
+        <strong>Your Profile is complete!</strong>
+    </div>
+}
+else{
+    <div asp-validation-summary="All" class="alert alert-danger"> Please complete your profile</div>
+
+}
+
+<hr />
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="CompleteProfile" method="post" enctype="multipart/form-data">
+
+            @Html.AntiForgeryToken()
+           
+
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label">Gender</label>
+                <select asp-for="Gender" class="form-control" >
+                    <option value="">Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    <option value="Prefer Not to Say">Prefer Not to Say</option>
+                </select>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="HeightFeet" class="control-label">Height (Feet & Inches)</label>
+                <div class="row">
+                    <div class="col">
+                        <input asp-for="HeightFeet" class="form-control" type="number" min="0" max="10" placeholder="Feet"  />
+                    </div>
+                    <div class="col">
+                        <input asp-for="HeightInches" class="form-control" type="number" min="0" max="11" placeholder="Inches"  />
+                    </div>
+                </div>
+                <span asp-validation-for="HeightFeet" class="text-danger"></span>
+                <span asp-validation-for="HeightInches" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Weight" class="control-label">Weight (lbs)</label>
+                <input asp-for="Weight" class="form-control" type="number" min="50" max="500"  />
+                <span asp-validation-for="Weight" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FitnessGoal" class="control-label">Fitness Goal</label>
+                <input asp-for="FitnessGoal" class="form-control"  />
+                <span asp-validation-for="FitnessGoal" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ProfilePicture" class="control-label">Profile Picture</label>
+                <input asp-for="ProfilePicture" type="file" class="form-control" id="ProfilePictureInput" />
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">
+                    @(isProfileComplete ? "Save Changes" : "Complete Profile")
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

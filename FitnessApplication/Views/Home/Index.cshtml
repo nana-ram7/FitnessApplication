@@ -1,0 +1,183 @@
+﻿
+@{
+    ViewData["Title"] = "Welcome to Your Fitness Journey!";
+}
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>It's Time to Regain Your Fitness</h1>
+        <p>Do fitness anywhere and anytime with our training videos.</p>
+        <a asp-controller="Account" asp-action="SignUp" class="btn btn-primary">Get Started</a>
+        <a asp-controller="Workout" asp-action="Index" class="btn btn-outline">Explore Workouts</a>
+    </div>
+    <div class="hero-image">
+        <img src="/images/fitness-hero.png" alt="Fitness Illustration">
+    </div>
+</section>
+
+<section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+        <div class="feature">
+            <h3>Daily Workouts</h3>
+            <p>Get personalized workouts.</p>
+            <img src="/images/persoanlize.png" alt="Fitness Illustration" />
+        </div>
+        <div class="feature">
+            <h3>Access Anywhere</h3>
+            <p>Train from home or the gym.</p>
+            <img src="/images/anywhere.jpg" alt="Fitness Illustration" />
+        </div>
+        <div class="feature">
+            <h3>Community Support</h3>
+            <p>Join a fitness community that helps you stay motivated.</p>
+            <img src="/images/community.jpg" alt="Community Illustration" />
+        </div>
+    </div>
+</section>
+
+<section class="workouts">
+    <h2>Popular Workouts</h2>
+    @if (ViewBag.FeaturedWorkouts != null){
+        <div class="workout-grid">
+        @foreach (var workout in ViewBag.FeaturedWorkouts)
+        {
+            <div class="workout-card">
+                <img src="@workout.ThumbnailUrl" alt="@workout.WorkoutName">
+                <h3>@workout.WorkoutName</h3>
+                <p>@workout.Description</p>
+                <a asp-controller="Workout" asp-action="Gallery" class="btn btn-info">View Workout</a>
+            </div>
+        }
+        </div>
+    }
+    else{
+        <p>No featured workouts available.</p>
+    }
+</section>
+
+<section class="cta">
+    <h2>Start Your Fitness Journey Today</h2>
+    <p>Sign up now and get access to free workouts and progress tracking!</p>
+    <a asp-controller="Account" asp-action="SignUp" class="btn btn-primary">Sign Up for Free</a>
+</section>
+<style>
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    color: white;
+    padding: 60px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 12px 20px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn-primary {
+    background: #ff4d6d;
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.features {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.feature-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 250px;
+    height: 300px; 
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature img {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+.feature h3{
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+.feature p{
+    font-size: 1 rem;
+    margin: 0;
+}
+
+.workouts {
+    text-align: center;
+    padding: 50px;
+}
+
+.workout-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.workout-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.workout-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.cta {
+    text-align: center;
+    background: #ff4d6d;
+    color: white;
+    padding: 40px;
+}
+</style>

@@ -1,0 +1,41 @@
+﻿@model List<FitnessApplication.Models.Workout>
+
+@{
+    ViewData["Title"] = "My Favorite Workouts";
+}
+
+<h1>My Favorite Workouts</h1>
+
+@if (Model != null && Model.Count > 0)
+{
+    <div class="row">
+        @foreach (var workout in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    @if (!string.IsNullOrEmpty(workout.ThumbnailUrl))
+                    {
+                        <img src="@workout.ThumbnailUrl" class="card-img-top" alt="Workout Thumbnail">
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@workout.WorkoutName</h5>
+                        <p class="card-text">@workout.Description</p>
+                        <p class="card-text"><small>Duration: @workout.Duration minutes</small></p>
+                        <a href="@workout.VideoUrl" target="_blank" class="btn btn-primary">Watch Video</a>
+
+                        <!-- Remove Button -->
+                        <form asp-action="RemoveFromFavorites" asp-controller="Workout" method="post" style="display:inline;">
+                            <input type="hidden" name="workoutId" value="@workout.WorkoutId" />
+                            <input type="hidden" name="returnUrl" value="@Url.Action("MyFavorites", "Workout")" />
+                            <button type="submit" class="btn btn-danger mt-2">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+else
+{
+    <p>You haven't favorited any workouts yet!</p>
+}
