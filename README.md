@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FitnessApplication 💪
 
 A fitness tracking web app built with ASP.NET Core MVC.  
@@ -25,3 +26,6 @@ Clone the project:
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/FitnessApplication.git
+=======
+# FitnessApplication1
+>>>>>>> 96af18379bdd48aeb46f7e0fad713410c24fe010
