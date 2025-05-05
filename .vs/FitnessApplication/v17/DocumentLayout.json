@@ -3,15 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\yaily\\OneDrive\\Desktop\\Senior Project\\FitnessApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{754D36CE-B21D-4195-A9B1-A4ADEF583F29}|Solution Items{754D36CE-B21D-4195-A9B1-A4ADEF583F29}|C:\\Users\\yaily\\Downloads\\Dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|c:\\users\\yaily\\onedrive\\desktop\\senior project\\fitnessapplication\\fitnessapplication\\models\\fitnesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|solutionrelative:fitnessapplication\\models\\fitnesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|c:\\users\\yaily\\onedrive\\desktop\\senior project\\fitnessapplication\\fitnessapplication\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|solutionrelative:fitnessapplication\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|c:\\users\\yaily\\onedrive\\desktop\\senior project\\fitnessapplication\\fitnessapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|solutionrelative:fitnessapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|c:\\users\\yaily\\onedrive\\desktop\\senior project\\fitnessapplication\\fitnessapplication\\models\\fitnesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|solutionrelative:fitnessapplication\\models\\fitnesscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B41085E-A9D3-4273-A1DD-4D82C343394C}|FitnessApplication\\FitnessApplication.csproj|c:\\users\\yaily\\onedrive\\desktop\\senior project\\fitnessapplication\\fitnessapplication\\models\\userfavoriteworkout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -101,24 +102,24 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Dockerfile",
-              "DocumentMoniker": "C:\\Users\\yaily\\Downloads\\Dockerfile",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Downloads\\Dockerfile",
-              "ToolTip": "C:\\Users\\yaily\\Downloads\\Dockerfile",
-              "RelativeToolTip": "..\\..\\..\\..\\Downloads\\Dockerfile",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
+              "DocumentMoniker": "C:\\Users\\yaily\\OneDrive\\Desktop\\Senior Project\\FitnessApplication\\FitnessApplication\\Dockerfile",
+              "RelativeDocumentMoniker": "FitnessApplication\\Dockerfile",
+              "ToolTip": "C:\\Users\\yaily\\OneDrive\\Desktop\\Senior Project\\FitnessApplication\\FitnessApplication\\Dockerfile",
+              "RelativeToolTip": "FitnessApplication\\Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-05-01T20:21:56.816Z",
+              "WhenOpened": "2025-05-01T20:53:33.19Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\yaily\\OneDrive\\Desktop\\Senior Project\\FitnessApplication\\FitnessApplication\\Models\\User.cs",
               "RelativeDocumentMoniker": "FitnessApplication\\Models\\User.cs",
               "ToolTip": "C:\\Users\\yaily\\OneDrive\\Desktop\\Senior Project\\FitnessApplication\\FitnessApplication\\Models\\User.cs",
               "RelativeToolTip": "FitnessApplication\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-29T15:11:41.192Z",
               "EditorCaption": ""
@@ -133,18 +134,16 @@
               "RelativeToolTip": "FitnessApplication\\Models\\UserFavoriteWorkout.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-29T15:11:39.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T15:11:39.516Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "dbo.User [Data]",
+              "Title": "dbo.User.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FitnessAppDb/True/SqlTable/dbo.User.sql",
-              "ToolTip": "dbo.User [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/FitnessAppDb/True/SqlTable/dbo.User.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-04-29T14:49:37.728Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T14:49:37.728Z"
             },
             {
               "$type": "Document",
@@ -156,8 +155,7 @@
               "RelativeToolTip": "FitnessApplication\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-04-29T14:32:49.554Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-29T14:32:49.554Z"
             },
             {
               "$type": "Document",
@@ -185,7 +183,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FitnessContext.cs",
               "DocumentMoniker": "C:\\Users\\yaily\\OneDrive\\Desktop\\Senior Project\\FitnessApplication\\FitnessApplication\\Models\\FitnessContext.cs",
               "RelativeDocumentMoniker": "FitnessApplication\\Models\\FitnessContext.cs",
@@ -193,8 +191,7 @@
               "RelativeToolTip": "FitnessApplication\\Models\\FitnessContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T03:41:46.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T03:41:46.769Z"
             },
             {
               "$type": "Document",
@@ -230,8 +227,7 @@
               "RelativeToolTip": "FitnessApplication\\Models\\Workout.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T17:26:05.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T17:26:05.31Z"
             },
             {
               "$type": "Document",
