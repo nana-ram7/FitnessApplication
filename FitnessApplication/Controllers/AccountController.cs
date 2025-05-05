@@ -135,7 +135,7 @@ namespace FitnessApplication.Controllers
                 }
                 catch (Exception ex)
                 {
-                    ModelState.AddModelError("", ex.Message);
+                    ModelState.AddModelError("", ex.InnerException?.Message ?? ex.Message);
                     return View(model);
 
                 }
