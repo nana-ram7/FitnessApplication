@@ -9,12 +9,11 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copy .csproj and restore
-COPY FitnessApplication/FitnessApplication.csproj FitnessApplication/
-RUN dotnet restore "FitnessApplication/FitnessApplication.csproj"
+COPY FitnessApplication.csproj ./
+RUN dotnet restore "FitnessApplication.csproj"
 
 # Copy the rest of the app
-COPY FitnessApplication/ FitnessApplication/
-WORKDIR /src/FitnessApplication
+COPY . ./
 RUN dotnet build "FitnessApplication.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # Publish stage
@@ -27,5 +26,3 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "FitnessApplication.dll"]
-
-#updated dockerfile 
