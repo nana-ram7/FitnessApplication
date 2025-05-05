@@ -41,7 +41,7 @@ namespace FitnessApplication.Models
      
         public string? FitnessGoal { get; set; }
         public string? ProfilePicture { get; set; }
-        public List<UserFavoriteWorkout> UserFavorites { get; set; }
+        public List<UserFavoriteWorkout> UserFavorites { get; set; } = new();
         public bool IsAdmin { get; set; } = false;
 
     }

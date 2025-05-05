@@ -135,7 +135,7 @@ namespace FitnessApplication.Controllers
                 }
                 catch (Exception ex)
                 {
-                    ModelState.AddModelError("", "Email is already in use or another error occurred.");
+                    ModelState.AddModelError("", ex.Message);
                     return View(model);
 
                 }
