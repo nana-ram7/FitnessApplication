@@ -5,7 +5,7 @@ namespace FitnessApplication.Models
     public class FitnessContext : DbContext
     {
         public FitnessContext(DbContextOptions<FitnessContext> options) : base(options) { }
-        public DbSet<User> User { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<Workout> Workouts { get; set; }
         public DbSet<UserFavoriteWorkout> UserFavoriteWorkouts { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -18,7 +18,7 @@ namespace FitnessApplication.Controllers
 
         public IActionResult Index()
         {
-            return View(_context.User.ToList());
+            return View(_context.Users.ToList());
         }
 
 
@@ -35,7 +35,7 @@ namespace FitnessApplication.Controllers
             //checks if form data is valid
             if (ModelState.IsValid)
             {
-                var user = _context.User.Where(x => x.Email == model.Email && x.Password == model.Password).FirstOrDefault();
+                var user = _context.Users.Where(x => x.Email == model.Email && x.Password == model.Password).FirstOrDefault();
                 if (user != null)
                 {
                     //Success, create a cookie if user is found
@@ -80,7 +80,7 @@ namespace FitnessApplication.Controllers
             }
 
             int userId = int.Parse(userIdClaim.Value);
-            var user = _context.User.FirstOrDefault(u => u.UserId == userId);
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
 
             if (user == null)
             {
@@ -119,7 +119,7 @@ namespace FitnessApplication.Controllers
 
                 try
                 {
-                    _context.User.Add(account);
+                    _context.Users.Add(account);
                     _context.SaveChanges();
                     var claims = new List<Claim>
                     {
@@ -156,7 +156,7 @@ namespace FitnessApplication.Controllers
             }
 
             int userId = int.Parse(userIdClaim.Value);
-            var user = _context.User.FirstOrDefault(u => u.UserId == userId);
+            var user = _context.Users.FirstOrDefault(u => u.UserId == userId);
 
             if (user == null)
             {
