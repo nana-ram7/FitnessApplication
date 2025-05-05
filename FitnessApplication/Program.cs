@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using FitnessApplication.Models;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Npgsql.EntityFrameworkCore.PostgreSQL; 
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
 
 
-builder.Services.AddDbContext<FitnessContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("FitnessContext")));
+builder.Services.AddDbContext<FitnessContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("FitnessContext")));
 
 var app = builder.Build();
 

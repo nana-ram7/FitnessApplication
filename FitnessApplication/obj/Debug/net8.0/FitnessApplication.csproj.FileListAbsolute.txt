@@ -286,3 +286,6 @@ C:\Users\yaily\OneDrive\Desktop\Senior Project\FitnessApplication\FitnessApplica
 C:\Users\yaily\OneDrive\Desktop\Senior Project\FitnessApplication\FitnessApplication\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\yaily\OneDrive\Desktop\Senior Project\FitnessApplication\FitnessApplication\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\yaily\OneDrive\Desktop\Senior Project\FitnessApplication\FitnessApplication\obj\Debug\net8.0\FitnessApplication.sourcelink.json
+C:\Users\yaily\OneDrive\Desktop\Senior Project\FitnessApplication\FitnessApplication\bin\Debug\net8.0\Npgsql.dll
+C:\Users\yaily\OneDrive\Desktop\Senior Project\FitnessApplication\FitnessApplication\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\yaily\OneDrive\Desktop\Senior Project\FitnessApplication\FitnessApplication\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
