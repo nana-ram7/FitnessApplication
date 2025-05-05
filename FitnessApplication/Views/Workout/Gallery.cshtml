@@ -7,28 +7,23 @@
 
 <h2>Workout Gallery</h2>
 
-<form asp-action="Gallery" method="get"  class="mb-4">
-    <div class="row">
-        <div class="col-md-4">
-            <select name="workoutType" class="form-select" onchange="this.form.submit()">
-                <option value="All">All Categories</option>
-                @if (ViewBag.WorkoutTypes != null)
-                {
-                    foreach (var type in ViewBag.WorkoutTypes as List<string>)
-                    {
-                        <option value="@type">@type</option>
-                    }
-                }
-            </select>
-        </div>
-        <div class="col-md-4">
-            <input type="text" name="searchString" class="form-control" placeholder="Search workouts..." />
-        </div>
-        <div class="col-md-4">
-            <button type="submit" class="btn btn-primary w-100">Search</button>
-        </div>
-    </div>
+<form asp-action="Gallery" method="get" class="d-flex flex-wrap gap-2 align-items-center mb-4">
+    <select name="workoutType" class="form-select" style="width: auto; min-width: 160px;">
+        <option value="All">All Categories</option>
+        @if (ViewBag.WorkoutTypes != null)
+        {
+            foreach (var type in ViewBag.WorkoutTypes as List<string>)
+            {
+                <option value="@type">@type</option>
+            }
+        }
+    </select>
+
+    <input type="text" name="searchString" class="form-control" placeholder="Search workouts..." style="flex: 1; min-width: 200px;" />
+
+    <button type="submit" class="btn btn-primary" style="white-space: nowrap;">Search</button>
 </form>
+
 
 <div class="row">
     @foreach (var workout in Model)
@@ -111,5 +106,17 @@
         font-size: 18px;
         line-height: 1;
         padding: 5px;
+            form .form-select, form .form-control, form .btn
+
+    {
+        border-radius: 6px;
+        font-size: 0.95rem;
+    }
+
+    form input::placeholder {
+        font-style: italic;
+        color: #888;
+    }
+
     }
 </style>
